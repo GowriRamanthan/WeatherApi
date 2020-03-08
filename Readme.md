@@ -1,4 +1,4 @@
-#Weather API
+##Weather API
 
 Node JS AWS Lamda function to call the open weather api
 
