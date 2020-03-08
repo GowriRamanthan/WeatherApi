@@ -1,0 +1,18 @@
+service: weather-service
+frameworkVersion: ">=1.1.0 <2.0.0"
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  stage: dev
+  region: us-east-1
+
+functions:
+  weatherApi:
+    handler: weatherHandler.getWeatherReport
+    memorySize: 128
+    description: getWeatherReport
+    events:
+      - http:
+          path: weather
+          method: get
